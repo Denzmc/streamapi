@@ -27,7 +27,7 @@ public class Solution {
     }
 
     private static Long allReadingTasks(List<List<Task>> tasks) {
-        return null;
+        return tasks.stream().flatMap(Collection::stream).filter(t -> t.getTags().contains("books")).distinct().count();
         // Ваш код здесь
     }
 }
